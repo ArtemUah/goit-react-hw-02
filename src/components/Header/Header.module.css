@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.title {
+    font-size: large;
+}
+
+.text {
+    font-size: medium;
+    margin: 0;
+    margin-bottom: 10px;
+
+}
