@@ -1,15 +1,12 @@
 import css from "./Feedback.module.css";
 
-export default function ({totalFeedback, fbTypes, good, neutral, bad, total, positive}) {
+export default function ({totalFeedback, positiveFeedback, feedbackTypes}) {
     return (
-        <>
-        {totalFeedback ? (<ul className={css.itemList}>
-            <li>{good}: {fbTypes.good}</li>
-            <li>{neutral}: {fbTypes.neutral}</li>
-            <li>{bad}: {fbTypes.bad}</li>
-            <li>{total}: {totalFeedback}</li>
-            <li>{positive}: {Math.round((fbTypes.good / totalFeedback) * 100)}%</li>
-        </ul>) : 
-        (<p className={css.text}>No feedback yet</p>)}</>
-    )
+    <ul className={css.itemList}>
+            <li>Good: {feedbackTypes.good}</li>
+            <li>Neutral: {feedbackTypes.neutral}</li>
+            <li>Bad: {feedbackTypes.bad}</li>
+            <li>Total: {totalFeedback}</li>
+            <li>Positive: {positiveFeedback}%</li>
+        </ul>) 
 }
